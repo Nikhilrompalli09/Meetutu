@@ -1,5 +1,10 @@
 <!-- after after login -->
-
+<?php
+	session_start();
+if(!$_SESSION["username"]){
+header("location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -216,8 +221,8 @@
 	</center>
 	<div id="nameContainer">
 		<center>
-			<h1 id="name">Nikhil Krishna Chandu Rompalli</h1>
-			<h3 id="degin">Learner</h3>
+			<h1 id="name"><?php echo $_SESSION["username"] ?></h1>
+			<h3 id="degin">Learner/Teacher</h3>
 		</center>
 	</div>
 	<div id="despContainer">

@@ -25,7 +25,6 @@ if(isset($_POST['btnsubmit']))
 	$addr=$_POST['addr'];
 	$about="hiiii";
 	$email=$_SESSION["email"];
-	echo "$lastName"," ","$dign"," ","$lang"," ","$addr"," ","$about";
 	$query="UPDATE meetutu_users SET lastName='$lastName', designation='$dign',languages='$lang',address='$addr',about='$about' WHERE email='$email' ";
 	// $query="insert into meetutu_users(lastName,designation,languages,address,about) values('$lastName','$dign','$lang','addr','$about') where email=$email";
 	$run=$con->query($query);
